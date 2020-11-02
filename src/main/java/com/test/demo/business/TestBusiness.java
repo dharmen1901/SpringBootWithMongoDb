@@ -13,7 +13,7 @@ public class TestBusiness {
     public DatabaseConfig dataBaseConfig;
 
     public List<Collection> testDetails(){
-        List<Collection> result = dataBaseConfig.findAllByTitle("5f9f857bdd66321dbc83d4ab") ;
+        List<Collection> result = dataBaseConfig.findData("TestData") ;
         return result;
     }
 }
