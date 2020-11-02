@@ -11,10 +11,10 @@ import java.util.List;
 @Repository
 public interface DatabaseConfig extends MongoRepository<Collection,String> {
 
-    @Query(value  = "{'data': ?0}",count = true)
-    public List<Collection> findData(String type);
+    @Query(value  = "{'data': ?0,'year':?1}",count = true)
+    public List<Collection> findDataInCollection(String data,String year);
 
     public List<Collection> findAllByTitle(String title);
 
-    public List<Collection> findOneByYear(String year);
+    public List<Collection> findByYearAndTitle(String year,String title);
 }
